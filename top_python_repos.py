@@ -22,6 +22,15 @@ for repo_dict in repo_dicts:
     stars.append(repo_dict['stargazers_count'])
 
 # Create a bar chart using Plotly Express to visualize repository stars.
-fig = px.bar(x=repo_names, y=stars)
+title = "Most-Starred Python Projects on GitHub"
+lables = {'x': 'Repository',
+          'y': 'Stars'}
+fig = px.bar(x=repo_names, y=stars, labels=lables)
+
+fig.update_layout(title_font_size=28, xaxis_title_font_size=20,
+                   yaxis_title_font_size=20, title_text=title)
+
+fig.update_traces(marker_color='DarkSlateGrey', marker_opacity=0.7)
+
 fig.show()
 

@@ -24,5 +24,3 @@ This Python script fetches and visualizes information about top Python repositor
 
 - **requests:** For making HTTP requests.
 - **plotly:** For creating interactive visualizations.
-
-
